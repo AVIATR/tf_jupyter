@@ -27,7 +27,7 @@ RUN chmod +x /tini && \
     pip install --ignore-installed --upgrade ${PROTOBUF_URL}
 
 # Set up and launch jupyter notebook
-WORKDIR ~ 
+WORKDIR /root
 COPY HelloWorld.ipynb .
 COPY jupyter_notebook_config.py .jupyter/
 EXPOSE 8888
