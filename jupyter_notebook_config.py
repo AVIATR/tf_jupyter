@@ -7,7 +7,7 @@ c.NotebookApp.keyfile = u'/etc/ssl/notebook/mykey.key'
 c.NotebookApp.ip = '0.0.0.0'
 #c.NotebookApp.password = u'sha1:bcd259ccf...<your hashed password here>'
 c.NotebookApp.open_browser = False
-
+c.NotebookApp.notebook_dir = '/root/notebooks/'
 # It is a good idea to set a known, fixed port for server access
 c.NotebookApp.port = 8888
 c.IPKernelApp.pylab = 'inline' #for inline matplotlib figures

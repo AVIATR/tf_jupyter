@@ -23,14 +23,15 @@ RUN chmod +x /tini && \
     apt-get clean && \
     pip install --upgrade pip && \
     pip install jupyter && \
+    pip install numpy && \
+    pip install matplotlib && \
     pip install --ignore-installed --upgrade ${TF_BINARY_URL} && \
     pip install --ignore-installed --upgrade ${PROTOBUF_URL}
 
 # Set up and launch jupyter notebook
 WORKDIR /root
-COPY HelloWorld.ipynb .
+#COPY HelloWorld.ipynb /root/notebooks/
 COPY jupyter_notebook_config.py .jupyter/
 EXPOSE 8888
 ENTRYPOINT ["/tini", "--"]
-#CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
 CMD ["jupyter", "notebook", "--allow-root"]
