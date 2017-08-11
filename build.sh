@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t endertekin/vanilla_tf .
+docker build -t aviatr/tf_jupyter
