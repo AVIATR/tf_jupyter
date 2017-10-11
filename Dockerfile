@@ -17,7 +17,7 @@ WORKDIR /tmp
 RUN chmod +x /tini && \
     apt-get update && \
     apt-get install -y -q \
-        apt-utils build-essential \
+        apt-utils build-essential git vim \
         python2.7 python2.7-dev python-pip && \
     apt-get autoremove && \
     apt-get clean && \
@@ -32,6 +32,7 @@ RUN chmod +x /tini && \
 WORKDIR /root
 #COPY HelloWorld.ipynb /root/notebooks/
 COPY jupyter_notebook_config.py .jupyter/
+COPY custom.css .jupyter/custom/
 EXPOSE 8888
 ENTRYPOINT ["/tini", "--"]
 CMD ["jupyter", "notebook", "--allow-root"]
