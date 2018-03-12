@@ -1,6 +1,6 @@
 # Set options for certfile, ip, password, and toggle off
-c.NotebookApp.certfile = u'/etc/ssl/notebook/mycert.pem'
-c.NotebookApp.keyfile = u'/etc/ssl/notebook/mykey.key'
+c.NotebookApp.certfile = u'/etc/notebook/cert/mycert.pem'
+c.NotebookApp.keyfile = u'/etc/notebook/cert/mykey.key'
 # Set ip to '*' to bind on all interfaces (ips) for the public server
 # Instructions at http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#notebook-public-server
 # and https://github.com/jupyter/docker-stacks/tree/master/minimal-notebook for docker

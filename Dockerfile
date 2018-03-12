@@ -33,6 +33,8 @@ WORKDIR /root
 #COPY HelloWorld.ipynb /root/notebooks/
 COPY jupyter_notebook_config.py .jupyter/
 COPY custom.css .jupyter/custom/
+COPY run-jupyter.sh /root
 EXPOSE 8888
 ENTRYPOINT ["/tini", "--"]
-CMD ["jupyter", "notebook", "--allow-root"]
+CMD ["/root/run-jupyter.sh"]
+#CMD ["sh", "-c", "/root/run-jupyter.sh"]
