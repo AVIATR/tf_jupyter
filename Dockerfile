@@ -38,6 +38,6 @@ COPY jupyter_notebook_config.py .jupyter/
 COPY custom.css .jupyter/custom/
 COPY run-jupyter.sh /root
 EXPOSE 8888
-ENTRYPOINT ["/tini", "--"]
+ENTRYPOINT ["/tini", "-s", "--"]
 CMD ["/root/run-jupyter.sh"]
 #CMD ["sh", "-c", "/root/run-jupyter.sh"]
