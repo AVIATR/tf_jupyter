@@ -110,7 +110,7 @@ body[data-notebook-path] #header, .terminal-app #header { display: none !importa
 /* NOTEBOOK AND EDITOR INTERFACE */
 
 /* comment out the following line to unhide the toolbar */
-div#maintoolbar { display: none !important; }
+/* div#maintoolbar { display: none !important; } */
 
 /*
   Header UI styles
@@ -161,7 +161,8 @@ span.save_widget span.filename:hover {
   Inverting the notebook editor UI
 */
 
-.celltoolbar {
+.cell
+ {
   border-color: #444;
   background: #444;
   color: #b7b7b7;

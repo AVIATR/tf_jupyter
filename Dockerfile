@@ -24,6 +24,7 @@ RUN chmod +x /tini && \
     pip3 install jupyter && \
     pip3 install numpy && \
     pip3 install matplotlib && \
+    pip3 install tqdm && \
 	pip3 install jupyter_nbextensions_configurator && \
 	pip3 install jupyter_contrib_nbextensions && \
     pip3 install protobuf && \
