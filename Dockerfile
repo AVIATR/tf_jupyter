@@ -7,7 +7,7 @@
 FROM debian:stable-slim
 MAINTAINER Ender Tekin <etekin@wisc.edu>
 ENV DEBIAN_FRONTEND noninteractive
-ENV TINI_VERSION v0.17.0
+ENV TINI_VERSION v0.18.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 
 #Install git, python and some other image libraries that opencv needs, install tensorflow, install opencv, cleanup
