@@ -22,8 +22,9 @@ RUN chmod +x /tini && \
     pip3 install numpy && \
     pip3 install matplotlib && \
     pip3 install tqdm && \
+	pip3 install requests && \
     pip3 install protobuf && \
-    pip3 install tensorflow && \
+    pip3 install tensorflow-gpu && \
 	pip3 install jupyter_nbextensions_configurator && \
 	pip3 install jupyter_contrib_nbextensions && \
 	jupyter contrib nbextension install --user && \
