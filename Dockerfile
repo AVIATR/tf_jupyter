@@ -33,5 +33,6 @@ WORKDIR /root
 COPY jupyter_notebook_config.py .jupyter/
 COPY custom.css .jupyter/custom/
 COPY run-jupyter.sh /root
-EXPOSE 8888
-ENTRYPOINT ["/root/run-jupyter.sh"]
+#Expose the ports for jupyter notebook & tensorboard
+EXPOSE 8888 6006
+CMD ["/root/run-jupyter.sh"]
