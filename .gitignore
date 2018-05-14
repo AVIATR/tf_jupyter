@@ -1,5 +1,4 @@
-private/mycert.pem
-private/mykey.key
+private
 .DS_Store
 .ipynb_checkpoints
 
