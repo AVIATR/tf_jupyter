@@ -5,6 +5,7 @@
 ############################################################
 
 FROM debian:stable-slim
+FROM nvidia/cuda:9.1-cudnn7-runtime-ubuntu16.04
 MAINTAINER Ender Tekin <etekin@wisc.edu>
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -23,6 +24,7 @@ RUN	/usr/bin/env python3 -m pip install jupyter && \
 	/usr/bin/env python3 -m pip install requests && \
     /usr/bin/env python3 -m pip install protobuf && \
     /usr/bin/env python3 -m pip install tensorflow && \
+    /usr/bin/env python3 -m pip install tensorflow-gpu && \
 	/usr/bin/env python3 -m pip install jupyter_nbextensions_configurator && \
 	/usr/bin/env python3 -m pip install jupyter_contrib_nbextensions && \
 	jupyter contrib nbextension install --user && \
