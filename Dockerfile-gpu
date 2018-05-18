@@ -4,7 +4,7 @@
 # See https://www.tensorflow.org/install/install_linux for tensorflow installation instructions
 ############################################################
 
-FROM nvidia/cuda:9.1-cudnn7-runtime-ubuntu16.04
+FROM nvidia/cuda:9.0-cudnn7-runtime-ubuntu16.04
 MAINTAINER Ender Tekin <etekin@wisc.edu>
 ENV DEBIAN_FRONTEND noninteractive
 
