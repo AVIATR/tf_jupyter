@@ -4,4 +4,5 @@ docker run -d --rm -p 8888:8888 -p 6006:6006 \
     -v $(pwd)/notebooks:/tmp/notebooks \
     -v /tmp/tflogs:/tmp/tflogs \
     -w /tmp \
-    --name tf-jupyter --init aviatr/tf_jupyter
+    --runtime=nvidia \
+    --name tf-jupyter --init aviatr/tf_jupyter:gpu
