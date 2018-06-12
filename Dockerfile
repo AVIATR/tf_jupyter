@@ -11,8 +11,8 @@ ENV DEBIAN_FRONTEND noninteractive
 #Install git, python and some other image libraries that opencv needs, install tensorflow, install opencv, cleanup
 RUN apt-get update && \
     apt-get install -y -q \
-        apt-utils build-essential git vim imagemagick \
-        python3.5 python3.5-dev python3-pip python3-pythonmagick && \
+        apt-utils build-essential git vim libmagickwand-dev \
+        python3.5 python3.5-dev python3-pip && \
     apt-get autoremove && \
     apt-get clean && \
     /usr/bin/env python3 -m pip install jupyter && \
@@ -21,6 +21,7 @@ RUN apt-get update && \
     /usr/bin/env python3 -m pip install tqdm && \
     /usr/bin/env python3 -m pip install requests && \
     /usr/bin/env python3 -m pip install protobuf && \
+    /usr/bin/env python3 -m pip install Wand && \
     /usr/bin/env python3 -m pip install tensorflow && \
     /usr/bin/env python3 -m pip install jupyter_nbextensions_configurator && \
     /usr/bin/env python3 -m pip install jupyter_contrib_nbextensions && \
