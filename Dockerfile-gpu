@@ -26,6 +26,7 @@ RUN apt-get update && \
     /usr/bin/env python3 -m pip install jupyter_nbextensions_configurator && \
     /usr/bin/env python3 -m pip install jupyter_contrib_nbextensions && \
     /usr/bin/env python3 -m pip install h5py && \
+    /usr/bin/env python3 -m pip install Pillow && \
     jupyter contrib nbextension install --user && \
     jupyter nbextensions_configurator enable --user
 
