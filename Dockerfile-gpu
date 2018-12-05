@@ -12,7 +12,10 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get install -y -q \
         apt-utils build-essential git vim libmagickwand-dev \
-        python3.5 python3.5-dev python3-pip libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk && \
+        python3.5 python3.5-dev python3-pip python-setuptools \
+        libffi-dev libxml2-dev libxslt1-dev \
+        libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev \
+        liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk && \
     apt-get autoremove && \
     apt-get clean && \
     /usr/bin/env python3 -m pip install jupyter && \
