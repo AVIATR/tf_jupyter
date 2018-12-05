@@ -9,10 +9,12 @@ MAINTAINER Ender Tekin <etekin@wisc.edu>
 ENV DEBIAN_FRONTEND noninteractive
 
 #Install git, python and some other image libraries that opencv needs, install tensorflow, install opencv, cleanup
-RUN apt-get update build-dep python-imaging && \
+RUN apt-get update && \
     apt-get install -y -q \
         apt-utils build-essential git vim libmagickwand-dev \
-        python3.5 python3.5-dev python3-pip libjpeg62 libjpeg62-dev && \
+        python3.5 python3.5-dev python3-pip && \
+    apt-get build-dep python-imaging && \
+    apt-get install -y -q libjpeg62 libjpeg62-dev && \
     apt-get autoremove && \
     apt-get clean && \
     /usr/bin/env python3 -m pip install jupyter && \
