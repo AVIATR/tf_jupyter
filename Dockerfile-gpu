@@ -18,7 +18,7 @@ RUN apt-get update && \
     /usr/bin/env python3 -m pip install jupyter && \
     /usr/bin/env python3 -m pip install numpy && \
     /usr/bin/env python3 -m pip install h5py && \
-    /usr/bin/env python3 -m pip3 install Pillow && \
+    /usr/bin/env python3 -m pip install Pillow && \
     /usr/bin/env python3 -m pip install matplotlib && \
     /usr/bin/env python3 -m pip install tqdm && \
     /usr/bin/env python3 -m pip install requests && \
