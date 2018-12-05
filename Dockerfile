@@ -17,6 +17,8 @@ RUN apt-get update && \
     apt-get clean && \
     /usr/bin/env python3 -m pip install jupyter && \
     /usr/bin/env python3 -m pip install numpy && \
+    /usr/bin/env python3 -m pip install h5py && \
+    /usr/bin/env python3 -m pip3 install Pillow && \
     /usr/bin/env python3 -m pip install matplotlib && \
     /usr/bin/env python3 -m pip install tqdm && \
     /usr/bin/env python3 -m pip install requests && \
@@ -25,8 +27,6 @@ RUN apt-get update && \
     /usr/bin/env python3 -m pip install tensorflow && \
     /usr/bin/env python3 -m pip install jupyter_nbextensions_configurator && \
     /usr/bin/env python3 -m pip install jupyter_contrib_nbextensions && \
-    /usr/bin/env python3 -m pip install h5py && \
-    /usr/bin/env python3 -m pip install Pillow && \
     jupyter contrib nbextension install --user && \
     jupyter nbextensions_configurator enable --user
 
