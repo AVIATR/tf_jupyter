@@ -28,6 +28,7 @@ RUN apt-get update && \
     /usr/bin/env python3 -m pip install protobuf && \
     /usr/bin/env python3 -m pip install Wand && \
     /usr/bin/env python3 -m pip install tensorflow && \
+    /usr/bin/env python3 -m pip install tensorflow-hub && \
     /usr/bin/env python3 -m pip install jupyter_nbextensions_configurator && \
     /usr/bin/env python3 -m pip install jupyter_contrib_nbextensions && \
     jupyter contrib nbextension install --user && \
