@@ -33,9 +33,9 @@ esac
 done
 
 if [ "$GPU" = yes ]; then
-    RUNTIME_OPTS = "--runtime=nvidia"
+    RUNTIME_OPTS="--runtime=nvidia"
 else
-    RUNTIME_OPTS = ""
+    RUNTIME_OPTS=""
 fi
 
 
@@ -44,4 +44,4 @@ docker run -d --rm -p 8888:8888 -p 6006:6006 \
     -v $(pwd)/notebooks:/tmp/notebooks \
     -v /tmp/tflogs:/tmp/tflogs \
     -w /tmp \
-    --name tf-jupyter "${RUNTIME_OPTS}" --init aviatr/tf_jupyter:"${TAG}"
+    --name tf-jupyter ${RUNTIME_OPTS} --init aviatr/tf_jupyter:"${TAG}"

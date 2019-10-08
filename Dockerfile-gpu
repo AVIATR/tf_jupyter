@@ -12,17 +12,19 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get install -y -q \
         apt-utils build-essential git vim libmagickwand-dev \
-        python3.5 python3.5-dev python3-pip && \
+        python3.7 python3.7-dev python3-pip && \
     apt-get autoremove && \
     apt-get clean && \
     /usr/bin/env python3 -m pip install jupyter && \
     /usr/bin/env python3 -m pip install numpy && \
+    /usr/bin/env python3 -m pip install scipy && \
     /usr/bin/env python3 -m pip install matplotlib && \
     /usr/bin/env python3 -m pip install tqdm && \
     /usr/bin/env python3 -m pip install requests && \
     /usr/bin/env python3 -m pip install protobuf && \
     /usr/bin/env python3 -m pip install Wand && \
     /usr/bin/env python3 -m pip install tensorflow-gpu && \
+    /usr/bin/env python3 -m pip install scikit-learn && \
     /usr/bin/env python3 -m pip install jupyter_nbextensions_configurator && \
     /usr/bin/env python3 -m pip install jupyter_contrib_nbextensions && \
     jupyter contrib nbextension install --user && \
