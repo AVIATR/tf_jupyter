@@ -5,4 +5,4 @@ jupyter nbextension enable notify/notify
 jupyter nbextension enable scratchpad/main
 jupyter nbextension enable collapsible_headings/main
 jupyter nbextension enable execute_time/ExecuteTime
-jupyter notebook --allow-root --no-browser --notebook-dir="$(pwd)/notebooks" --NotebookApp.password="$HASHED_PASSWORD"
+jupyter notebook --allow-root --no-browser --notebook-dir="$(pwd)" --NotebookApp.password="$HASHED_PASSWORD"

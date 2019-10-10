@@ -1,5 +1,5 @@
 ############################################################
-# Dockerfile to build Python 3.5 + Tensorflow latest (currently 1.8) image
+# Dockerfile to build Python 3.7 + Tensorflow latest (currently 2.0) image
 # Based on Debian
 # See https://www.tensorflow.org/install/install_linux for tensorflow installation instructions
 ############################################################
@@ -14,7 +14,8 @@ RUN apt-get update && \
         apt-utils build-essential git vim libmagickwand-dev \
         python3.7 python3.7-dev python3-pip && \
     apt-get autoremove && \
-    apt-get clean && \
+    apt-get clean
+RUN /usr/bin/env python3 -m pip install --upgrade pip && \
     /usr/bin/env python3 -m pip install jupyter && \
     /usr/bin/env python3 -m pip install numpy && \
     /usr/bin/env python3 -m pip install scipy && \
